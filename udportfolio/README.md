@@ -12,11 +12,11 @@ To inspect the result you should visit:
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
 * optimized image sizes
-* media query for print.css
-* async for analytics.js
-* minified style.css and inserted this in <style> tag in index.html
+* media query for *print.css*
+* async for *analytics.js*
+* minified *style.css* and inserted this in `<style>` tag in *index.html*
 
-#### Part 2: Optimize Frames per Second in pizza.html
+#### Part 2: Optimize Frames per Second and Computational Efficiency in pizza.html
 
 ##### Frame Rate
 
@@ -28,5 +28,5 @@ To inspect the result you should visit:
 
 ##### Computational Efficiency (pizza slider)
 
-* Optimized changePizzaSizes() function so that newWidth is calculated only once and then set for all pizzas. 
-* Calling DOM query for .randomPizzaContainer only one time per function call.
+* Optimized `changePizzaSizes()` function so that `newWidth` is calculated only once and then set for all pizzas. 
+* Calling DOM query for `.randomPizzaContainer` only one time per function call.
