@@ -496,9 +496,9 @@ console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "
 // Used by updatePositions() to decide when to log the average time per frame
 var frame = 0;
 
+/* Global variables for parallaxing pizza items */
 var items = null;
 var itemsLen = 0;
-
 
 // Logs the average amount of time per 10 frames needed to move the sliding background pizzas on scroll.
 function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
@@ -553,6 +553,7 @@ window.addEventListener('scroll', onScroll);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  // reduce number of pizza items from 200 to 40 (8 * 5)
   for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -563,7 +564,9 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
-  items = document.querySelectorAll(".mover"); /* gus */
-  itemsLen = items.length; /* gus */ 
+  /* Set items and itemsLen for subsequent access */
+  items = document.querySelectorAll(".mover");
+  itemsLen = items.length;
+  
   updatePositions();
 });
