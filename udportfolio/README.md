@@ -9,14 +9,14 @@ To inspect the result you should visit:
 
 ### Optimizations
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+#### Part 1: Optimize PageSpeed Insights score for index.html
 
 * optimized image sizes
 * media query for print.css
 * async for analytics.js
 * minified style.css and inserted this in <style> tag in index.html
 
-####Part 2: Optimize Frames per Second in pizza.html
+#### Part 2: Optimize Frames per Second in pizza.html
 
 ##### Frame Rate
 
